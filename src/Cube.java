@@ -6,7 +6,6 @@ public class Cube {
     ArrayList<Point3d> points;
     ArrayList<Wall>  walls;
 
-    ArrayList<Point2d> points2d;
 
     public Cube(ArrayList<Point3d> points) {
         this.points = points;
@@ -79,15 +78,6 @@ public class Cube {
     public void setWalls(ArrayList<Wall> walls) {
         this.walls = walls;
     }
-
-    public ArrayList<Point2d> getPoints2d() {
-        return points2d;
-    }
-
-    public void setPoints2d(ArrayList<Point2d> points2d) {
-        this.points2d = points2d;
-    }
-
 
     public double computeSumDist() {
         double result = 0;
