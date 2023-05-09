@@ -1,3 +1,4 @@
+import javax.vecmath.Point3d;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,8 @@ public class Wall {
         this.points.add(p3);
         this.points.add(p4);
     }
+
+    public Wall(){}
 
     public ArrayList<Point3d> getPoints() {
         return points;

@@ -1,3 +1,4 @@
+import javax.vecmath.Point3d;
 import java.util.ArrayList;
 import java.util.List;
 import java.lang.Math;
@@ -30,9 +31,9 @@ public class Cube {
 
     public void translate(double x, double y, double z ) {
         for (Point3d point : points) {
-            point.setX(point.getX() + x);
-            point.setY(point.getY() + y);
-            point.setZ(point.getZ() + z);
+            point.x = point.x + x;
+            point.y = point.y + y;
+            point.z = point.z + z;
 
         }
     }
@@ -42,22 +43,22 @@ public class Cube {
         double cos = Math.cos(k);
 
         for (Point3d point : points) {
-            double x = point.getX();
-            double y = point.getY();
-            double z = point.getZ();
+            double x = point.x;
+            double y = point.y;
+            double z = point.z;
 
             switch (axis) {
                 case 'x':
-                    point.setY(y * cos - z * sin);
-                    point.setZ(z * cos + y * sin);
+                    point.y = y * cos - z * sin;
+                    point.z = z * cos + y * sin;
                     break;
                 case 'y':
-                    point.setX(x * cos + z * sin);
-                    point.setZ(z * cos - x * sin);
+                    point.x = x * cos + z * sin;
+                    point.z = z * cos - x * sin;
                     break;
                 case 'z':
-                    point.setX(x * cos - y * sin);
-                    point.setY(y * cos + x * sin);
+                    point.x = (x * cos - y * sin);
+                    point.y = (y * cos + x * sin);
                     break;
             }
         }

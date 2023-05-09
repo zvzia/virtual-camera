@@ -4,6 +4,7 @@ import java.awt.event.KeyListener;
 import java.util.*;
 import java.util.List;
 import javax.swing.*;
+import javax.vecmath.Point3d;
 
 public class Main extends JPanel implements KeyListener {
     private static final int WIDTH = 1200;
@@ -52,9 +53,9 @@ public class Main extends JPanel implements KeyListener {
                 List<Point3d> wallPoints3d = wall.getPoints();
 
                 for (Point3d point : wallPoints3d) {
-                    double px = point.getX();
-                    double py = point.getY();
-                    double pz = point.getZ();
+                    double px = point.x;
+                    double py = point.y;
+                    double pz = point.z;
                     double ppx = px * CAMERA_DISTANCE / pz;
                     double ppy = py * CAMERA_DISTANCE / pz;
                     wallPoints2d.add(new Point2d(ppx, ppy));
@@ -233,4 +234,10 @@ public class Main extends JPanel implements KeyListener {
 
         return cubes;
     }
+     public static ArrayList<Wall> sortWalls(ArrayList<Wall> walls){
+         ArrayList<Wall> sorted = new ArrayList<>();
+
+        return sorted;
+     }
+
 }
