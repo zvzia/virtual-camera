@@ -1,6 +1,5 @@
 import javax.vecmath.Point3d;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Wall {
     ArrayList<Point3d> points;
